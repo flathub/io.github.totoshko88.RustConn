@@ -58,7 +58,7 @@ modules:
       - type: git
         url: https://github.com/totoshko88/RustConn.git
         tag: v0.7.0
-        commit: 5a654c626da026dea1b6c4e7f5adb5aaea679a94
+        commit: b015b5309215cacbce51c151d55017afb1bbb32e
         x-checker-data:
           type: git
           tag-pattern: "^v([\\d.]+)$"
