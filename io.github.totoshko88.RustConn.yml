@@ -19,6 +19,18 @@ finish-args:
   - --filesystem=home/.ssh:ro
   # SSH agent socket
   - --socket=ssh-auth
+  # Config directory access for connections, groups, snippets, settings
+  - --filesystem=xdg-config/rustconn:create
+  # Access to run host commands (xfreerdp, vncviewer, remote-viewer, aws, gcloud, etc.)
+  - --talk-name=org.freedesktop.Flatpak
+  # D-Bus access for secret service (GNOME Keyring, KWallet)
+  - --talk-name=org.freedesktop.secrets
+  - --talk-name=org.kde.kwalletd5
+  - --talk-name=org.kde.kwalletd6
+  # KeePassXC proxy access
+  - --talk-name=org.keepassxc.KeePassXC.BrowserServer
+  # System tray (StatusNotifierItem)
+  - --talk-name=org.kde.StatusNotifierWatcher
 
 build-options:
   append-path: /usr/lib/sdk/rust-stable/bin
@@ -57,8 +69,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/totoshko88/RustConn.git
-        tag: v0.7.1
-        commit: 9239f7456ecec13d7d7b315145dfb0960e29b1ee
+        tag: v0.7.2
+        commit: 0b9f66ec8cc7b6fc2b251084bbad83b2989c5bad
         x-checker-data:
           type: git
           tag-pattern: "^v([\\d.]+)$"
