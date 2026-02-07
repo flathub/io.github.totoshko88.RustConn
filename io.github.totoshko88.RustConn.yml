@@ -19,6 +19,14 @@ finish-args:
   - --filesystem=home/.ssh:ro
   # SSH agent socket
   - --socket=ssh-auth
+  # D-Bus access for secret service (GNOME Keyring, KWallet)
+  - --talk-name=org.freedesktop.secrets
+  - --talk-name=org.kde.kwalletd5
+  - --talk-name=org.kde.kwalletd6
+  # KeePassXC proxy access
+  - --talk-name=org.keepassxc.KeePassXC.BrowserServer
+  # System tray (StatusNotifierItem)
+  - --talk-name=org.kde.StatusNotifierWatcher
 
 build-options:
   append-path: /usr/lib/sdk/rust-stable/bin
@@ -39,8 +47,8 @@ modules:
       - -Ddocs=false
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/vte/0.78/vte-0.78.6.tar.xz
-        sha256: eadd2c93f481cb1985548ceab88d2df9b21cd8903c8e4b38528c03efd6ece7e1
+        url: https://download.gnome.org/sources/vte/0.78/vte-0.78.7.tar.xz
+        sha256: 6fd1edc332d9f9519ce4c0f07135fdf72d64dfd990dc4fabc6ce91b1b7e83dd0
 
   - name: rustconn
     buildsystem: simple
@@ -57,9 +65,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/totoshko88/RustConn.git
-        tag: v0.7.1
-        commit: 9239f7456ecec13d7d7b315145dfb0960e29b1ee
+        tag: v0.7.6
         x-checker-data:
           type: git
-          tag-pattern: "^v([\\d.]+)$"
+          tag-pattern: ^v([\d.]+)$
       - cargo-sources.json
