@@ -6957,14 +6957,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/toml/toml-0.9.11+spec-1.1.0.crate",
-        "sha256": "f3afc9a848309fe1aaffaed6e1546a7a14de1f935dc9d89d32afd9a44bab7c46",
-        "dest": "cargo/vendor/toml-0.9.11+spec-1.1.0"
+        "url": "https://static.crates.io/crates/toml/toml-0.9.12+spec-1.1.0.crate",
+        "sha256": "cf92845e79fc2e2def6a5d828f0801e29a2f8acc037becc5ab08595c7d5e9863",
+        "dest": "cargo/vendor/toml-0.9.12+spec-1.1.0"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"f3afc9a848309fe1aaffaed6e1546a7a14de1f935dc9d89d32afd9a44bab7c46\", \"files\": {}}",
-        "dest": "cargo/vendor/toml-0.9.11+spec-1.1.0",
+        "contents": "{\"package\": \"cf92845e79fc2e2def6a5d828f0801e29a2f8acc037becc5ab08595c7d5e9863\", \"files\": {}}",
+        "dest": "cargo/vendor/toml-0.9.12+spec-1.1.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -7022,14 +7022,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/toml_parser/toml_parser-1.0.6+spec-1.1.0.crate",
-        "sha256": "a3198b4b0a8e11f09dd03e133c0280504d0801269e9afa46362ffde1cbeebf44",
-        "dest": "cargo/vendor/toml_parser-1.0.6+spec-1.1.0"
+        "url": "https://static.crates.io/crates/toml_parser/toml_parser-1.0.7+spec-1.1.0.crate",
+        "sha256": "247eaa3197818b831697600aadf81514e577e0cba5eab10f7e064e78ae154df1",
+        "dest": "cargo/vendor/toml_parser-1.0.7+spec-1.1.0"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"a3198b4b0a8e11f09dd03e133c0280504d0801269e9afa46362ffde1cbeebf44\", \"files\": {}}",
-        "dest": "cargo/vendor/toml_parser-1.0.6+spec-1.1.0",
+        "contents": "{\"package\": \"247eaa3197818b831697600aadf81514e577e0cba5eab10f7e064e78ae154df1\", \"files\": {}}",
+        "dest": "cargo/vendor/toml_parser-1.0.7+spec-1.1.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
