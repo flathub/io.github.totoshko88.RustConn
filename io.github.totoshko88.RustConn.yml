@@ -78,17 +78,15 @@ modules:
       - cargo build --release -p rustconn -p rustconn-cli
       - install -Dm755 target/release/rustconn /app/bin/rustconn
       - install -Dm755 target/release/rustconn-cli /app/bin/rustconn-cli
-      - install -Dm644 rustconn/assets/io.github.totoshko88.RustConn.desktop /app/share/applications/io.github.totoshko88.RustConn.desktop
-      - install -Dm644 rustconn/assets/io.github.totoshko88.RustConn.metainfo.xml
-        /app/share/metainfo/io.github.totoshko88.RustConn.metainfo.xml
-      - install -Dm644 rustconn/assets/icons/hicolor/scalable/apps/io.github.totoshko88.RustConn.svg
-        /app/share/icons/hicolor/scalable/apps/io.github.totoshko88.RustConn.svg
+      - install -Dm644 rustconn/assets/io.github.totoshko88.RustConn.desktop -t /app/share/applications
+      - install -Dm644 rustconn/assets/io.github.totoshko88.RustConn.metainfo.xml -t /app/share/metainfo
+      - install -Dm644 rustconn/assets/icons/hicolor/scalable/apps/io.github.totoshko88.RustConn.svg -t /app/share/icons/hicolor/scalable/apps
     sources:
       - type: git
         url: https://github.com/totoshko88/RustConn.git
         tag: v0.8.1
+        commit: f6df653d070252ceddd6ae578e8b743e9cb7ec78
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
-        commit: f6df653d070252ceddd6ae578e8b743e9cb7ec78
       - cargo-sources.json
