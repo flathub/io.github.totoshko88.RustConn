@@ -57,6 +57,8 @@ modules:
           type: gnome
           name: vte
           stable-only: true
+          versions:
+            <: '0.79.0'
 
   - name: sshpass
     buildsystem: autotools
