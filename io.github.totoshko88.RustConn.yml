@@ -58,7 +58,7 @@ modules:
           name: vte
           stable-only: true
           versions:
-            <: '0.79.0'
+            <: 0.79.0
 
   - name: sshpass
     buildsystem: autotools
@@ -150,8 +150,10 @@ modules:
       - install -Dm755 target/release/rustconn /app/bin/rustconn
       - install -Dm755 target/release/rustconn-cli /app/bin/rustconn-cli
       - install -Dm644 rustconn/assets/io.github.totoshko88.RustConn.desktop /app/share/applications/io.github.totoshko88.RustConn.desktop
-      - install -Dm644 rustconn/assets/io.github.totoshko88.RustConn.metainfo.xml /app/share/metainfo/io.github.totoshko88.RustConn.metainfo.xml
-      - install -Dm644 rustconn/assets/icons/hicolor/scalable/apps/io.github.totoshko88.RustConn.svg /app/share/icons/hicolor/scalable/apps/io.github.totoshko88.RustConn.svg
+      - install -Dm644 rustconn/assets/io.github.totoshko88.RustConn.metainfo.xml
+        /app/share/metainfo/io.github.totoshko88.RustConn.metainfo.xml
+      - install -Dm644 rustconn/assets/icons/hicolor/scalable/apps/io.github.totoshko88.RustConn.svg
+        /app/share/icons/hicolor/scalable/apps/io.github.totoshko88.RustConn.svg
       # Install locale files (compile .po to .mo)
       - |
         for po_file in po/*.po; do
@@ -167,4 +169,5 @@ modules:
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
+        commit: 9142d25486f934ddf8a02bfe208e59a0018377a4
       - cargo-sources.json
