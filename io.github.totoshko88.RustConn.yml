@@ -86,14 +86,14 @@ modules:
       - -Ddocs=false
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/vte/0.80/vte-0.80.0.tar.xz
-        sha256: 267f63739765e568cf8113d0e2ee8f593028946187854bebe268c778e62647c8
+        url: https://download.gnome.org/sources/vte/0.80/vte-0.80.5.tar.xz
+        sha256: 58a4e00ab5d4a95b4be4dc57b48308deafd72d6839dbbd076648fa353321cc41
         x-checker-data:
           type: gnome
           name: vte
           stable-only: true
           versions:
-            <: '0.81.0'
+            <: 0.81.0
 
   - name: inetutils
     buildsystem: autotools
@@ -224,7 +224,8 @@ modules:
       # parse SGR-encoded mouse events — causing raw escape fragments
       # like "7;6M7;6m" on every click. Removing XM prevents the
       # negotiation so VTE falls back to X10/normal mouse mode.
-      - infocmp -x -1 xterm-256color | sed 's/xterm-256color/rustconn-256color/' | sed '/XM=/d' | tic -x -o /app/share/terminfo -
+      - infocmp -x -1 xterm-256color | sed 's/xterm-256color/rustconn-256color/' |
+        sed '/XM=/d' | tic -x -o /app/share/terminfo -
       # Ensure `clear` is available inside the sandbox.
       # GNOME Platform runtime may not include ncurses-utils, so we
       # create a minimal shell wrapper that uses ANSI escape sequences
@@ -283,13 +284,16 @@ modules:
         chmod +x /app/bin/cc-wrap
       # Rename deprecated cargo/config to config.toml
       - if [ -f cargo/config ]; then mv cargo/config cargo/config.toml; fi
-      - CC=/app/bin/cc-wrap cargo build --release -p rustconn --features adw-1-8 -p rustconn-cli
+      - CC=/app/bin/cc-wrap cargo build --release -p rustconn --features adw-1-8 -p
+        rustconn-cli
       - install -Dm755 target/release/rustconn /app/bin/rustconn
       - install -Dm755 target/release/rustconn-cli /app/bin/rustconn-cli
       - install -Dm644 rustconn/assets/io.github.totoshko88.RustConn.desktop /app/share/applications/io.github.totoshko88.RustConn.desktop
       - install -Dm644 rustconn/assets/io.github.totoshko88.RustConn-rdp.xml /app/share/mime/packages/io.github.totoshko88.RustConn-rdp.xml
-      - install -Dm644 rustconn/assets/io.github.totoshko88.RustConn.metainfo.xml /app/share/metainfo/io.github.totoshko88.RustConn.metainfo.xml
-      - install -Dm644 rustconn/assets/icons/hicolor/scalable/apps/io.github.totoshko88.RustConn.svg /app/share/icons/hicolor/scalable/apps/io.github.totoshko88.RustConn.svg
+      - install -Dm644 rustconn/assets/io.github.totoshko88.RustConn.metainfo.xml
+        /app/share/metainfo/io.github.totoshko88.RustConn.metainfo.xml
+      - install -Dm644 rustconn/assets/icons/hicolor/scalable/apps/io.github.totoshko88.RustConn.svg
+        /app/share/icons/hicolor/scalable/apps/io.github.totoshko88.RustConn.svg
       # Install locale files (compile .po to .mo)
       - |
         for po_file in po/*.po; do
@@ -305,4 +309,5 @@ modules:
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
+        commit: 8dad529c25f64d55180b985b0c984e7b816000af
       - cargo-sources.json
