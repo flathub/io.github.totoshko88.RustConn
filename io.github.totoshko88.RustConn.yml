@@ -86,8 +86,8 @@ modules:
       - -Ddocs=false
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/vte/0.80/vte-0.80.0.tar.xz
-        sha256: 267f63739765e568cf8113d0e2ee8f593028946187854bebe268c778e62647c8
+        url: https://download.gnome.org/sources/vte/0.80/vte-0.80.3.tar.xz
+        sha256: 2e596fd3fbeabb71531662224e71f6a2c37f684426136d62854627276ef4f699
         x-checker-data:
           type: gnome
           name: vte
@@ -301,7 +301,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/totoshko88/RustConn.git
-        tag: v0.10.18
+        tag: v0.10.19
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
