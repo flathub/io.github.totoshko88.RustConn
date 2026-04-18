@@ -1146,14 +1146,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/constant_time_eq/constant_time_eq-0.4.2.crate",
-        "sha256": "3d52eff69cd5e647efe296129160853a42795992097e8af39800e1060caeea9b",
-        "dest": "cargo/vendor/constant_time_eq-0.4.2"
+        "url": "https://static.crates.io/crates/constant_time_eq/constant_time_eq-0.4.3.crate",
+        "sha256": "7dab3fe76c1571ecd5cfe878b61bce3fedf4adbde5d8a8653b2a7956ffd14628",
+        "dest": "cargo/vendor/constant_time_eq-0.4.3"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"3d52eff69cd5e647efe296129160853a42795992097e8af39800e1060caeea9b\", \"files\": {}}",
-        "dest": "cargo/vendor/constant_time_eq-0.4.2",
+        "contents": "{\"package\": \"7dab3fe76c1571ecd5cfe878b61bce3fedf4adbde5d8a8653b2a7956ffd14628\", \"files\": {}}",
+        "dest": "cargo/vendor/constant_time_eq-0.4.3",
         "dest-filename": ".cargo-checksum.json"
     },
     {
