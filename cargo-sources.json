@@ -1029,14 +1029,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/clap_mangen/clap_mangen-0.2.33.crate",
-        "sha256": "7e30ffc187e2e3aeafcd1c6e2aa416e29739454c0ccaa419226d5ecd181f2d78",
-        "dest": "cargo/vendor/clap_mangen-0.2.33"
+        "url": "https://static.crates.io/crates/clap_mangen/clap_mangen-0.3.0.crate",
+        "sha256": "d82842b45bf9f6a3be090dd860095ac30728042c08e0d6261ca7259b5d850f07",
+        "dest": "cargo/vendor/clap_mangen-0.3.0"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"7e30ffc187e2e3aeafcd1c6e2aa416e29739454c0ccaa419226d5ecd181f2d78\", \"files\": {}}",
-        "dest": "cargo/vendor/clap_mangen-0.2.33",
+        "contents": "{\"package\": \"d82842b45bf9f6a3be090dd860095ac30728042c08e0d6261ca7259b5d850f07\", \"files\": {}}",
+        "dest": "cargo/vendor/clap_mangen-0.3.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
