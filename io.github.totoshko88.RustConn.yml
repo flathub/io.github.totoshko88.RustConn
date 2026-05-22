@@ -308,9 +308,9 @@ modules:
     sources:
       - type: git
         url: https://github.com/totoshko88/RustConn.git
-        tag: v0.14.4
+        tag: v0.14.5
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
-        commit: b01829e4e95f3cb594dfa55e86ad2b14b83c5f3a
+        commit: 800715ee539f2d6ef5df94751bd7aaa4e71a9ff7
       - cargo-sources.json
