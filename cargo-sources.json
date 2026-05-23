@@ -6281,14 +6281,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/rpassword/rpassword-7.5.2.crate",
-        "sha256": "5ac5b223d9738ef56e0b98305410be40fa0941bf6036c56f1506751e43552d64",
-        "dest": "cargo/vendor/rpassword-7.5.2"
+        "url": "https://static.crates.io/crates/rpassword/rpassword-7.5.3.crate",
+        "sha256": "835a57a69104632d64deb0df2e09a69945cd7a6eab4070fc9b1d7e50cf6c3edc",
+        "dest": "cargo/vendor/rpassword-7.5.3"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"5ac5b223d9738ef56e0b98305410be40fa0941bf6036c56f1506751e43552d64\", \"files\": {}}",
-        "dest": "cargo/vendor/rpassword-7.5.2",
+        "contents": "{\"package\": \"835a57a69104632d64deb0df2e09a69945cd7a6eab4070fc9b1d7e50cf6c3edc\", \"files\": {}}",
+        "dest": "cargo/vendor/rpassword-7.5.3",
         "dest-filename": ".cargo-checksum.json"
     },
     {
