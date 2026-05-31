@@ -4032,14 +4032,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/kqueue/kqueue-1.1.1.crate",
-        "sha256": "eac30106d7dce88daf4a3fcb4879ea939476d5074a9b7ddd0fb97fa4bed5596a",
-        "dest": "cargo/vendor/kqueue-1.1.1"
+        "url": "https://static.crates.io/crates/kqueue/kqueue-1.2.0.crate",
+        "sha256": "273c0752728918e0ac4976f2b275b6fefb9ecd400585dec929419f3844cd87b5",
+        "dest": "cargo/vendor/kqueue-1.2.0"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"eac30106d7dce88daf4a3fcb4879ea939476d5074a9b7ddd0fb97fa4bed5596a\", \"files\": {}}",
-        "dest": "cargo/vendor/kqueue-1.1.1",
+        "contents": "{\"package\": \"273c0752728918e0ac4976f2b275b6fefb9ecd400585dec929419f3844cd87b5\", \"files\": {}}",
+        "dest": "cargo/vendor/kqueue-1.2.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -4266,14 +4266,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/libz-sys/libz-sys-1.1.28.crate",
-        "sha256": "fc3a226e576f50782b3305c5ccf458698f92798987f551c6a02efe8276721e22",
-        "dest": "cargo/vendor/libz-sys-1.1.28"
+        "url": "https://static.crates.io/crates/libz-sys/libz-sys-1.1.29.crate",
+        "sha256": "85bc9657773828b90eeb625adff10eeac83cc21bbfd8e23a03eaa8a33c9e28d9",
+        "dest": "cargo/vendor/libz-sys-1.1.29"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"fc3a226e576f50782b3305c5ccf458698f92798987f551c6a02efe8276721e22\", \"files\": {}}",
-        "dest": "cargo/vendor/libz-sys-1.1.28",
+        "contents": "{\"package\": \"85bc9657773828b90eeb625adff10eeac83cc21bbfd8e23a03eaa8a33c9e28d9\", \"files\": {}}",
+        "dest": "cargo/vendor/libz-sys-1.1.29",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -6281,14 +6281,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/rpassword/rpassword-7.5.3.crate",
-        "sha256": "835a57a69104632d64deb0df2e09a69945cd7a6eab4070fc9b1d7e50cf6c3edc",
-        "dest": "cargo/vendor/rpassword-7.5.3"
+        "url": "https://static.crates.io/crates/rpassword/rpassword-7.5.4.crate",
+        "sha256": "2da316a15f47e3d053de9cb2c439650bd8fa4aaeb9365f2e5f27f492ff73c196",
+        "dest": "cargo/vendor/rpassword-7.5.4"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"835a57a69104632d64deb0df2e09a69945cd7a6eab4070fc9b1d7e50cf6c3edc\", \"files\": {}}",
-        "dest": "cargo/vendor/rpassword-7.5.3",
+        "contents": "{\"package\": \"2da316a15f47e3d053de9cb2c439650bd8fa4aaeb9365f2e5f27f492ff73c196\", \"files\": {}}",
+        "dest": "cargo/vendor/rpassword-7.5.4",
         "dest-filename": ".cargo-checksum.json"
     },
     {
