@@ -9349,14 +9349,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/yuv/yuv-0.8.15.crate",
-        "sha256": "dba772cc0fb636dfce23c6907e7ca49c35a4b2ac687ea5df86a1a8879e8ea219",
-        "dest": "cargo/vendor/yuv-0.8.15"
+        "url": "https://static.crates.io/crates/yuv/yuv-0.8.16.crate",
+        "sha256": "5d85a782d94ee43f078bcfd6fa82d4e6a5b2d1cfbbad168e4df5a9f7b39ef48c",
+        "dest": "cargo/vendor/yuv-0.8.16"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"dba772cc0fb636dfce23c6907e7ca49c35a4b2ac687ea5df86a1a8879e8ea219\", \"files\": {}}",
-        "dest": "cargo/vendor/yuv-0.8.15",
+        "contents": "{\"package\": \"5d85a782d94ee43f078bcfd6fa82d4e6a5b2d1cfbbad168e4df5a9f7b39ef48c\", \"files\": {}}",
+        "dest": "cargo/vendor/yuv-0.8.16",
         "dest-filename": ".cargo-checksum.json"
     },
     {
