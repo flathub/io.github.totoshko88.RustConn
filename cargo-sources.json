@@ -964,14 +964,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/chacha20/chacha20-0.10.0.crate",
-        "sha256": "6f8d983286843e49675a4b7a2d174efe136dc93a18d69130dd18198a6c167601",
-        "dest": "cargo/vendor/chacha20-0.10.0"
+        "url": "https://static.crates.io/crates/chacha20/chacha20-0.10.1.crate",
+        "sha256": "d524456ba66e72eb8b115ff89e01e497f8e6d11d78b70b1aa13c0fbd97540a81",
+        "dest": "cargo/vendor/chacha20-0.10.1"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"6f8d983286843e49675a4b7a2d174efe136dc93a18d69130dd18198a6c167601\", \"files\": {}}",
-        "dest": "cargo/vendor/chacha20-0.10.0",
+        "contents": "{\"package\": \"d524456ba66e72eb8b115ff89e01e497f8e6d11d78b70b1aa13c0fbd97540a81\", \"files\": {}}",
+        "dest": "cargo/vendor/chacha20-0.10.1",
         "dest-filename": ".cargo-checksum.json"
     },
     {
