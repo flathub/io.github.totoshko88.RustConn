@@ -334,5 +334,5 @@ modules:
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
-        commit: 9b46cf94cd219832d180f86f522da03c49f32d81
+        commit: 14aba29ec771344839536aac55075fdedf2916b5
       - cargo-sources.json
