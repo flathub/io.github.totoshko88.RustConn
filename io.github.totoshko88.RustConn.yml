@@ -339,7 +339,6 @@ modules:
         # The immutable commit is added once the tag exists — by hand or by the
         # Flathub bot — in the Flathub repository, not here.
         tag: v0.19.10
-        commit: fabc20ad0ebd96d564663ff99eccf54b66b85f93
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
