@@ -103,7 +103,7 @@ modules:
           name: vte
           stable-only: true
           versions:
-            <: 0.81.0
+            <: '0.81.0'
 
   - name: inetutils
     buildsystem: autotools
@@ -216,8 +216,7 @@ modules:
       # parse SGR-encoded mouse events — causing raw escape fragments
       # like "7;6M7;6m" on every click. Removing XM prevents the
       # negotiation so VTE falls back to X10/normal mouse mode.
-      - infocmp -x -1 xterm-256color | sed 's/xterm-256color/rustconn-256color/' |
-        sed '/XM=/d' | tic -x -o /app/share/terminfo -
+      - infocmp -x -1 xterm-256color | sed 's/xterm-256color/rustconn-256color/' | sed '/XM=/d' | tic -x -o /app/share/terminfo -
       # Ensure `clear` is available inside the sandbox.
       # GNOME Platform runtime may not include ncurses-utils, so we
       # create a minimal shell wrapper that uses ANSI escape sequences
@@ -318,10 +317,8 @@ modules:
       - install -Dm644 rustconn/assets/io.github.totoshko88.RustConn.desktop /app/share/applications/io.github.totoshko88.RustConn.desktop
       - install -Dm644 rustconn/assets/io.github.totoshko88.RustConn-rdp.xml /app/share/mime/packages/io.github.totoshko88.RustConn-rdp.xml
       - install -Dm644 rustconn/assets/io.github.totoshko88.RustConn-vv.xml /app/share/mime/packages/io.github.totoshko88.RustConn-vv.xml
-      - install -Dm644 rustconn/assets/io.github.totoshko88.RustConn.metainfo.xml
-        /app/share/metainfo/io.github.totoshko88.RustConn.metainfo.xml
-      - install -Dm644 rustconn/assets/icons/hicolor/scalable/apps/io.github.totoshko88.RustConn.svg
-        /app/share/icons/hicolor/scalable/apps/io.github.totoshko88.RustConn.svg
+      - install -Dm644 rustconn/assets/io.github.totoshko88.RustConn.metainfo.xml /app/share/metainfo/io.github.totoshko88.RustConn.metainfo.xml
+      - install -Dm644 rustconn/assets/icons/hicolor/scalable/apps/io.github.totoshko88.RustConn.svg /app/share/icons/hicolor/scalable/apps/io.github.totoshko88.RustConn.svg
       # Install locale files (compile .po to .mo).
       # Path NOT under /app/share/locale/ — flatpak-builder splits that into
       # per-language Locale extension subsets (issue #158). LOCALEDIR in
@@ -341,9 +338,8 @@ modules:
         # chicken-and-egg problem and any placeholder would be a fake pin.
         # The immutable commit is added once the tag exists — by hand or by the
         # Flathub bot — in the Flathub repository, not here.
-        tag: v0.20.6
+        tag: v0.20.7
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
-        commit: d82f91e67c7dadc6b902d965ad6f7b0a0ab23abb
       - cargo-sources.json
