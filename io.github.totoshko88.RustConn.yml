@@ -394,9 +394,9 @@ modules:
         # chicken-and-egg problem and any placeholder would be a fake pin.
         # The immutable commit is added once the tag exists — by hand or by the
         # Flathub bot — in the Flathub repository, not here.
-        tag: v0.21.6
+        tag: v0.21.7
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
-        commit: 442c37d9c8f37b815ba76ea055a148cb74dc3c12
+        commit: ab32b9b3244f87499d3e4ebda0bc71c3d79ffdd1
       - cargo-sources.json
