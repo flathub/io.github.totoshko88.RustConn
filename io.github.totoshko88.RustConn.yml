@@ -219,7 +219,8 @@ modules:
       - ln -sf waypipe-c /app/bin/waypipe
     sources:
       - type: archive
-        url: https://gitlab.freedesktop.org/mstoeckl/waypipe/-/archive/v0.11.2/waypipe-v0.11.2.tar.gz
+        url: 
+          https://gitlab.freedesktop.org/mstoeckl/waypipe/-/archive/v0.11.2/waypipe-v0.11.2.tar.gz
         sha256: 70914b590b2b9a74a16fe9936bb7dba6b3eb59466ed17aaba2613c9fa09b8dad
 
   - name: rustconn-terminfo
@@ -231,7 +232,8 @@ modules:
       # parse SGR-encoded mouse events — causing raw escape fragments
       # like "7;6M7;6m" on every click. Removing XM prevents the
       # negotiation so VTE falls back to X10/normal mouse mode.
-      - infocmp -x -1 xterm-256color | sed 's/xterm-256color/rustconn-256color/' | sed '/XM=/d' | tic -x -o /app/share/terminfo -
+      - infocmp -x -1 xterm-256color | sed 's/xterm-256color/rustconn-256color/' |
+        sed '/XM=/d' | tic -x -o /app/share/terminfo -
       # Ensure `clear` is available inside the sandbox.
       # GNOME Platform runtime may not include ncurses-utils, so we
       # create a minimal shell wrapper that uses ANSI escape sequences
@@ -341,7 +343,8 @@ modules:
     build-options:
       env:
         CARGO_NET_OFFLINE: 'true'
-        PKG_CONFIG_PATH: /app/lib64/pkgconfig:/app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+        PKG_CONFIG_PATH: 
+          /app/lib64/pkgconfig:/app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
     build-commands:
       # GNOME 50 SDK (GCC 15) appends -O2 via CFLAGS after aws-lc-sys sets -O0 for
       # jitterentropy-base.c, which triggers a #error requiring -O0. The wrapper
@@ -360,8 +363,10 @@ modules:
       - install -Dm644 rustconn/assets/io.github.totoshko88.RustConn.desktop /app/share/applications/io.github.totoshko88.RustConn.desktop
       - install -Dm644 rustconn/assets/io.github.totoshko88.RustConn-rdp.xml /app/share/mime/packages/io.github.totoshko88.RustConn-rdp.xml
       - install -Dm644 rustconn/assets/io.github.totoshko88.RustConn-vv.xml /app/share/mime/packages/io.github.totoshko88.RustConn-vv.xml
-      - install -Dm644 rustconn/assets/io.github.totoshko88.RustConn.metainfo.xml /app/share/metainfo/io.github.totoshko88.RustConn.metainfo.xml
-      - install -Dm644 rustconn/assets/icons/hicolor/scalable/apps/io.github.totoshko88.RustConn.svg /app/share/icons/hicolor/scalable/apps/io.github.totoshko88.RustConn.svg
+      - install -Dm644 rustconn/assets/io.github.totoshko88.RustConn.metainfo.xml
+        /app/share/metainfo/io.github.totoshko88.RustConn.metainfo.xml
+      - install -Dm644 rustconn/assets/icons/hicolor/scalable/apps/io.github.totoshko88.RustConn.svg
+        /app/share/icons/hicolor/scalable/apps/io.github.totoshko88.RustConn.svg
       # Install locale files (compile .po to .mo).
       # Path NOT under /app/share/locale/ — flatpak-builder splits that into
       # per-language Locale extension subsets (issue #158). LOCALEDIR in
@@ -385,4 +390,5 @@ modules:
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
+        commit: 4dd2c19c970fcab7628c537d82c30d540672f5b0
       - cargo-sources.json
