@@ -148,8 +148,8 @@ modules:
       - install -Dm755 picocom /app/bin/picocom
     sources:
       - type: archive
-        url: https://gitlab.com/wsakernel/picocom/-/archive/3.1/picocom-3.1.tar.gz
-        sha256: e6761ca932ffc6d09bd6b11ff018bdaf70b287ce518b3282d29e0270e88420bb
+        url: https://gitlab.com/wsakernel/picocom/-/archive/2024-07/picocom-2024-07.tar.gz
+        sha256: 4379de2ec591a5848123f37ccdbc7fbeee6dd3520ef1ce4119d84202fc268a17
         x-checker-data:
           type: anitya
           project-id: 3634
@@ -231,7 +231,8 @@ modules:
       # parse SGR-encoded mouse events — causing raw escape fragments
       # like "7;6M7;6m" on every click. Removing XM prevents the
       # negotiation so VTE falls back to X10/normal mouse mode.
-      - infocmp -x -1 xterm-256color | sed 's/xterm-256color/rustconn-256color/' | sed '/XM=/d' | tic -x -o /app/share/terminfo -
+      - infocmp -x -1 xterm-256color | sed 's/xterm-256color/rustconn-256color/' |
+        sed '/XM=/d' | tic -x -o /app/share/terminfo -
       # Ensure `clear` is available inside the sandbox.
       # GNOME Platform runtime may not include ncurses-utils, so we
       # create a minimal shell wrapper that uses ANSI escape sequences
@@ -360,8 +361,10 @@ modules:
       - install -Dm644 rustconn/assets/io.github.totoshko88.RustConn.desktop /app/share/applications/io.github.totoshko88.RustConn.desktop
       - install -Dm644 rustconn/assets/io.github.totoshko88.RustConn-rdp.xml /app/share/mime/packages/io.github.totoshko88.RustConn-rdp.xml
       - install -Dm644 rustconn/assets/io.github.totoshko88.RustConn-vv.xml /app/share/mime/packages/io.github.totoshko88.RustConn-vv.xml
-      - install -Dm644 rustconn/assets/io.github.totoshko88.RustConn.metainfo.xml /app/share/metainfo/io.github.totoshko88.RustConn.metainfo.xml
-      - install -Dm644 rustconn/assets/icons/hicolor/scalable/apps/io.github.totoshko88.RustConn.svg /app/share/icons/hicolor/scalable/apps/io.github.totoshko88.RustConn.svg
+      - install -Dm644 rustconn/assets/io.github.totoshko88.RustConn.metainfo.xml
+        /app/share/metainfo/io.github.totoshko88.RustConn.metainfo.xml
+      - install -Dm644 rustconn/assets/icons/hicolor/scalable/apps/io.github.totoshko88.RustConn.svg
+        /app/share/icons/hicolor/scalable/apps/io.github.totoshko88.RustConn.svg
       # Install locale files (compile .po to .mo).
       # Path NOT under /app/share/locale/ — flatpak-builder splits that into
       # per-language Locale extension subsets (issue #158). LOCALEDIR in
@@ -382,6 +385,7 @@ modules:
         # The immutable commit is added once the tag exists — by hand or by the
         # Flathub bot — in the Flathub repository, not here.
         tag: v0.24.11
+        commit: 6e34d85c61b62f3c4d533d8fa88179fd28095f77
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
